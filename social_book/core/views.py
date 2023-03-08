@@ -28,8 +28,10 @@ def index(request):
 
     feed_list = list(chain(*feed))
     #user suggestion
-    all_users = User.objects.all()
+    
     user_following_all = []
+    all_users = User.objects.all()
+   
 
     for user in user_following:
         user_list = User.objects.get(username = user.user)
@@ -40,8 +42,8 @@ def index(request):
     final_suggestions_list = [x for x in list(new_suggestion_list) if (x not in list(current_user))]
     random.shuffle(final_suggestions_list)
 
-    username_profile = []
     username_profile_list = []
+    username_profile = []
 
     for users in final_suggestions_list:
         username_profile.append(users.id)
@@ -218,10 +220,12 @@ def signup(request):
                 user.save()
 
                 #log user in and redirect to settings page
+                
                 user_login = auth.authenticate(username=username, password=password)
                 auth.login(request, user_login)
 
                 #create a Profile object for the new user
+                
                 user_model = User.objects.get(username=username)
                 new_profile = Profile.objects.create(user=user_model, id_user=user_model.id)
                 new_profile.save()
