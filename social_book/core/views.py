@@ -13,7 +13,7 @@ def index(request):
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
      
-    return render(request, 'index.html',{'user_profile': user_profile, 'posts':feed_list, 'suggestions_username_profile_list':suggestions_username_profile_list[:5]})
+
     user_following_list = []
     feed = []
 
@@ -28,6 +28,7 @@ def index(request):
 
     feed_list = list(chain(*feed))
 
+    return render(request, 'index.html', {'user_profile': user_profile, 'posts': feed_list,'suggestions_username_profile_list': suggestions_username_profile_list[:5]})
 @login_required(login_url='signin')
 def search(request):
     user_object = User.objects.get(username=request.user.username)
