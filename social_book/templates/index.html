@@ -65,12 +65,12 @@
                                         </svg>
                                     </div>
 
-                                    <form action="upload" method="POST" enctype="multipart/form-data">
+                                    <form action="upload pics" method="POST" enctype="multipart/form-data">
                                     {% csrf_token %}   
                                     <p class="my-3 leading-6"> Upload Pics  <br> Please Upload Here ..
                                     </p>
                                     <div>
-                                        <input type="file" name ="image_upload">
+                                        <input type="files" name ="image_upload">
                                         <textarea class="button soft-warning small" name = "caption" placeholder = "Caption...." ></textarea>
                                         <br>
                                         <button class ="button bg-blue-700" type="submit">Upload</button>
@@ -124,7 +124,7 @@
                                         </div>
                                         <div class="drop_content">
                                             <strong> Taiye </strong> <time> 6:43 PM</time>
-                                            <p> hi tomi </p>
+                                            <p> hi social media user </p>
                                         </div>
                                     </a>
                                 </li>
