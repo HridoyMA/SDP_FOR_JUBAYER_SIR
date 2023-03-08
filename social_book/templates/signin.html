@@ -1,6 +1,8 @@
-{% load static %}
 
+
+{% load static %}
 <!DOCTYPE html>
+
 <html lang="en">
 
 
@@ -55,6 +57,7 @@
                         }
                     </style>
                     {% for message in messages %}
+                    
                     <h5>{{message}}</h5>
                     {% endfor %}
                 </div>
@@ -68,6 +71,7 @@
                             <input type="checkbox" id="chekcbox1" checked>
                             <label for="chekcbox1"><span class="checkbox-icon"></span>Remember Me</label>
                         </div>
+                        
                         <a href="#"> Forgot Your Password? </a>
                     </div>
 
@@ -88,51 +92,16 @@
                     <a href="#"> About</a>
                     <a href="#"> Help</a>
                     <a href="#"> Terms</a>
-                    <a href="#"> Privacy</a>
+                    
                 </div>
-                <p class="capitalize"> © copyright by BUBT</p>
+                <p class="capitalize"> © copyright by BUBT Dept of CSE</p>
             </div>
         </div>
 
     </div>
 
 
-    <!--<script>
-        
-        (function (window, document, undefined) {
-            'use strict';
-            if (!('localStorage' in window)) return;
-            var nightMode = localStorage.getItem('gmtNightMode');
-            if (nightMode) {
-                document.documentElement.className += ' dark';
-            }
-        })(window, document);
-    
-    
-        (function (window, document, undefined) {
-    
-            'use strict';
-    
-            // Feature test
-            if (!('localStorage' in window)) return;
-    
-            // Get our newly insert toggle
-            var nightMode = document.querySelector('#night-mode');
-            if (!nightMode) return;
-    
-            // When clicked, toggle night mode on or off
-            nightMode.addEventListener('click', function (event) {
-                event.preventDefault();
-                document.documentElement.classList.toggle('dark');
-                if (document.documentElement.classList.contains('dark')) {
-                    localStorage.setItem('gmtNightMode', true);
-                    return;
-                }
-                localStorage.removeItem('gmtNightMode');
-            }, false);
-    
-        })(window, document);
-    </script>-->
+   
 
     <!-- Scripts
     ================================================== -->
